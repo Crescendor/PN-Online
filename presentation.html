@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PioNotes - MX Chat Premium Tanıtım Sunumu</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --bg-primary: #080c14;
+      --bg-secondary: #0f1524;
+      --bg-card: rgba(20, 29, 47, 0.65);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #64748b;
+      
+      --accent-indigo: #6366f1;
+      --accent-orange: #fb923c;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      
+      --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      --transition-normal: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      
+      --border-radius-lg: 24px;
+      --border-radius-md: 16px;
+      --border-radius-sm: 8px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Background Gradients */
+    .bg-gradient-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(120px);
+      opacity: 0.15;
+    }
+
+    .glow-1 {
+      background: var(--accent-indigo);
+      top: -10%;
+      left: -10%;
+      animation: floatGlow 12s ease-in-out infinite;
+    }
+
+    .glow-2 {
+      background: var(--accent-orange);
+      bottom: -10%;
+      right: -10%;
+      animation: floatGlow 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(40px, 60px) scale(1.15); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+
+    /* Floating Apricots & Stars background decorations */
+    .particle {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.25;
+      font-size: 1.5rem;
+      animation: particleFloat 6s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes particleFloat {
+      0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.3; }
+      90% { opacity: 0.3; }
+      100% { transform: translateY(-80px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Header Nav */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo span {
+      color: var(--accent-indigo);
+    }
+
+    .logo-badge {
+      font-size: 0.8rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 4px 10px;
+      border-radius: var(--border-radius-md);
+      color: var(--accent-indigo);
+      font-weight: 600;
+    }
+
+    /* Language Switcher Styling */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px;
+      border-radius: var(--border-radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      border-radius: calc(var(--border-radius-md) - 4px);
+      transition: var(--transition-normal);
+    }
+
+    .lang-btn:hover {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .lang-btn.active {
+      background: var(--accent-indigo);
+      color: #fff;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+    }
+
+    .close-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 10px 20px;
+      border-radius: var(--border-radius-md);
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition-normal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+      transform: translateY(-2px);
+    }
+
+    /* Presentation Core Container */
+    .presentation-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Slides Wrapper */
+    .slides-wrapper {
+      position: relative;
+      height: 580px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: var(--border-radius-lg);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Individual Slide */
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: translateX(100px);
+      pointer-events: none;
+      transition: opacity var(--transition-slow), transform var(--transition-slow);
+      display: flex;
+      align-items: center;
+      padding: 48px;
+      gap: 48px;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      z-index: 2;
+    }
+
+    .slide.prev {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    /* Slide Content Layout */
+    .slide-text {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slide-visual {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 100%;
+      perspective: 1000px;
+    }
+
+    /* Typography & Text Styling */
+    .slide-category {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-orange);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slide-category::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--accent-orange);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-orange);
+    }
+
+    .slide-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--text-primary) 30%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-description {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid var(--accent-indigo);
+      color: var(--accent-indigo);
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Image Showcase container */
+    .screenshot-frame {
+      width: 100%;
+      max-height: 420px;
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      background: #06090f;
+      transform: rotateY(-8deg) rotateX(4deg);
+      transition: all var(--transition-slow);
+    }
+
+    .screenshot-frame:hover {
+      transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(99, 102, 241, 0.2);
+    }
+
+    .screenshot-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Stat Dashboard Specifics (Slide 3) */
+    .stats-dashboard {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: var(--border-radius-md);
+    }
+
+    .stat-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .stat-label-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .stat-bar-container {
+      width: 100%;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--border-radius-full);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .stat-bar-fill {
+      height: 100%;
+      border-radius: var(--border-radius-full);
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.1, 1, 0.1, 1);
+    }
+
+    .stat-bar-fill.normal-sys {
+      background: #f87171; /* Red */
+    }
+
+    .stat-bar-fill.sprinklr {
+      background: #fb923c; /* Orange */
+    }
+
+    .stat-bar-fill.pionotes {
+      background: linear-gradient(90deg, #34d399, #10b981); /* Green neon */
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
+    }
+
+    .stat-metric-badge {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .badge-red { background: rgba(248, 113, 113, 0.2); border: 1px solid #f87171; color: #f87171 !important; }
+    .badge-orange { background: rgba(251, 146, 60, 0.2); border: 1px solid #fb923c; color: #fb923c !important; }
+    .badge-green { background: rgba(52, 211, 153, 0.2); border: 1px solid #34d399; color: #34d399 !important; }
+
+    /* Interactive UI widgets */
+    .ui-demo-widget {
+      width: 100%;
+      background: #0c1220;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
+      transform: rotateY(8deg) rotateX(2deg);
+      transition: var(--transition-normal);
+    }
+
+    .ui-demo-widget:hover {
+      transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+    }
+
+    .demo-header {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .demo-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .demo-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .demo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--text-muted);
+    }
+
+    .demo-content-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .demo-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-left: 4px solid var(--accent-indigo);
+      padding: 12px;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      transition: var(--transition-normal);
+      position: relative;
+    }
+
+    .demo-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateX(4px);
+    }
+
+    .demo-card-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .demo-card-text {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-family: monospace;
+    }
+
+    .demo-click-badge {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--accent-indigo);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: var(--transition-normal);
+    }
+
+    .demo-card:hover .demo-click-badge {
+      opacity: 1;
+    }
+
+    /* Navigation Controls */
+    .controls-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      margin: 24px auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-normal);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-btn:hover {
+      background: var(--accent-indigo);
+      border-color: var(--accent-indigo);
+      box-shadow: 0 0 15px var(--accent-glow);
+      transform: scale(1.08);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: none !important;
+      background: var(--bg-secondary) !important;
+      border-color: var(--border-color) !important;
+      box-shadow: none !important;
+    }
+
+    .nav-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+
+    /* Dot Navigation Indicators */
+    .dot-indicators {
+      display: flex;
+      gap: 12px;
+    }
+
+    .indicator-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: var(--transition-normal);
+    }
+
+    .indicator-dot.active {
+      background: var(--accent-indigo);
+      box-shadow: 0 0 10px var(--accent-glow);
+      transform: scale(1.25);
+    }
+
+    /* Large CTA Button (Slide 6) */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent-indigo) 0%, #4f46e5 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: var(--border-radius-md);
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+      transition: var(--transition-normal);
+      text-decoration: none;
+      width: fit-content;
+      margin-top: 15px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(99, 102, 241, 0.5);
+    }
+
+    .cta-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Footer Credit */
+    footer {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .slides-wrapper {
+        height: auto;
+        min-height: 650px;
+      }
+      .slide {
+        flex-direction: column;
+        padding: 32px;
+        gap: 32px;
+        align-items: stretch;
+      }
+      .slide-visual {
+        height: 300px;
+      }
+      .screenshot-frame {
+        transform: none;
+        max-height: 260px;
+      }
+      .ui-demo-widget {
+        transform: none;
+      }
+      .slide-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px;
+        justify-content: center;
+      }
+      .header-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .slide-title {
+        font-size: 1.6rem;
+      }
+      .slide-description {
+        font-size: 0.95rem;
+      }
+      .slide {
+        padding: 20px;
+      }
+      .cta-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Glowing Blobs -->
+  <div class="bg-gradient-glow glow-1"></div>
+  <div class="bg-gradient-glow glow-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-wrapper">
+      <a href="#" class="logo">
+        <span data-translate="logo_title">Pio<span>Notes</span></span> 
+        <div class="logo-badge" data-translate="logo_badge">PRO</div>
+      </a>
+      
+      <!-- Language Switcher in Header -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="tr">TR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <a href="sidepanel.html" class="close-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span data-translate="back_btn">Yan Panele Dön</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Presentation Container -->
+  <main class="presentation-container">
+    <div class="slides-wrapper">
+      
+      <!-- SLIDE 1: WELCOME & OVERVIEW -->
+      <section class="slide active" id="slide-1">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide1_cat">Giriş & Vizyon</div>
+          <h2 class="slide-title" data-translate="slide1_title">MX Chat İçin Akıllı Not ve Hızlı Mesajlaşma Asistanı</h2>
+          <p class="slide-description" data-translate="slide1_desc">PioNotes, Chrome yan panelinde çalışan ve müşteri destek temsilcilerinin en sık kullandığı mesaj şablonlarını anında kopyalamasını sağlayan, gelişmiş bir not alma ve organizasyon aracıdır. MX Chat süreçlerinizde zamandan tasarruf etmeniz ve müşterilere en kaliteli yanıtları iletmeniz için özel olarak tasarlandı.</p>
+          <ul class="feature-list">
+            <li data-translate="slide1_feat1"><strong>Maksimum Hız:</strong> Şablonları aramakla uğraşmadan tek tıkla kopyalayın.</li>
+            <li data-translate="slide1_feat2"><strong>Kolay Erişim:</strong> Tarayıcınızın sağ panelinde, ekranı kaplamadan her an elinizin altında.</li>
+            <li data-translate="slide1_feat3"><strong>Zengin İçerik:</strong> Biçimlendirilmiş metinleri (Rich Text) koruyarak kopyalama yeteneği.</li>
+          </ul>
+        </div>
+        <div class="slide-visual">
+          <div class="screenshot-frame">
+            <img class="screenshot-img" src="images/main_view.png" alt="PioNotes Dashboard View">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: THE GERMAN CHALLENGE -->
+      <section class="slide" id="slide-2">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide2_cat">Dil Bariyeri Çözümü</div>
+          <h2 class="slide-title" data-translate="slide2_title">Almanca İletişimde Kusursuzluğu Yakalayın</h2>
+          <p class="slide-description" data-translate="slide2_desc1">Müşteri destek süreçlerimizde anadili Almanca olmayan temsilciler olarak, her konuşmada sıfırdan hatasız ve profesyonel bir üslupla Almanca yazmak yorucudur ve zaman kaybına yol açar.</p>
+          <p class="slide-description" data-translate="slide2_desc2"><strong>PioNotes ile Dil Engeli Tarih Oluyor:</strong> Önceden onaylanmış, hatasız Almanca şablon mesajları kategorize edin. Müşterilerinizle tıpkı bir anadil konuşucusu gibi hızlı, kibar ve profesyonelce iletişim kurun.</p>
+          <ul class="feature-list">
+            <li data-translate="slide2_feat1">Doğru ve doğrulanmış kurumsal dil kullanımı.</li>
+            <li data-translate="slide2_feat2">Yazım hatalarının ve yanlış çevirilerin önüne geçilmesi.</li>
+            <li data-translate="slide2_feat3">Düşünme ve formüle etme sürelerinin sıfıra indirilmesi.</li>
+          </ul>
+        </div>
+        <div class="slide-visual">
+          <div class="screenshot-frame">
+            <img class="screenshot-img" src="images/sidepanel_view.png" alt="PioNotes Side Panel View">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: STATS & EFFICIENCY -->
+      <section class="slide" id="slide-3">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide3_cat">Verimlilik Analizi</div>
+          <h2 class="slide-title" data-translate="slide3_title">İnanılmaz Verimlilik Artışı: %60 ve %50 Daha Hızlı!</h2>
+          <p class="slide-description" data-translate="slide3_desc">PioNotes, temsilcilerin günlük operasyon sürelerini dramatik şekilde kısaltır. MX Chat destek süreçlerinde yapılan ölçümlere göre PioNotes'un gücü:</p>
+          
+          <div class="stats-dashboard">
+            <!-- Normal System Bar -->
+            <div class="stat-row">
+              <div class="stat-label-group">
+                <span data-translate="slide3_lbl1">Normal Sistem (Notepad, Excel, Word vb.)</span>
+                <span class="stat-metric-badge badge-red" data-translate="slide3_val1">Yavaş (45 sn)</span>
+              </div>
+              <div class="stat-bar-container">
+                <div class="stat-bar-fill normal-sys" data-width="100%"></div>
+              </div>
+            </div>
+            
+            <!-- Sprinklr System Bar -->
+            <div class="stat-row">
+              <div class="stat-label-group">
+                <span data-translate="slide3_lbl2">Sprinklr Şablon Sistemi</span>
+                <span class="stat-metric-badge badge-orange" data-translate="slide3_val2">Orta (30 sn)</span>
+              </div>
+              <div class="stat-bar-container">
+                <div class="stat-bar-fill sprinklr" data-width="66%"></div>
+              </div>
+            </div>
+            
+            <!-- PioNotes Bar -->
+            <div class="stat-row">
+              <div class="stat-label-group">
+                <span><strong data-translate="slide3_lbl3">PioNotes Kopyalama</strong></span>
+                <span class="stat-metric-badge badge-green" data-translate="slide3_val3">Ultra Hızlı (1.5 sn)</span>
+              </div>
+              <div class="stat-bar-container">
+                <div class="stat-bar-fill pionotes" data-width="3%"></div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="slide-description" style="font-size: 0.95rem; color: var(--accent-orange);" data-translate="slide3_note">
+            * PioNotes, Normal sisteme kıyasla <strong>%60</strong>, Sprinklr entegre şablonlarına kıyasla ise <strong>%50</strong> daha yüksek iş verimliliği sağlamaktadır.
+          </p>
+        </div>
+        <div class="slide-visual">
+          <!-- Interactive Mockup showing efficiency -->
+          <div style="text-align: center; background: rgba(99, 102, 241, 0.05); padding: 30px; border-radius: var(--border-radius-md); border: 1px dashed var(--accent-indigo); width: 100%;">
+            <div style="font-size: 4rem; margin-bottom: 10px;">⚡</div>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);" data-translate="slide3_vtitle">Anında Yanıt Döngüsü</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;" data-translate="slide3_vdesc">Ortalama bir günde, PioNotes kullanan bir agent <strong>en az 45 dakika</strong> daha az kopyalama/arama süresi harcar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: FOLDERS & SMART CATEGORIZATION -->
+      <section class="slide" id="slide-4">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide4_cat">Kategorizasyon</div>
+          <h2 class="slide-title" data-translate="slide4_title">Klasör Klasör Düzenleyin, Sürükleyip Sıralayın</h2>
+          <p class="slide-description" data-translate="slide4_desc">Karışık şablon listelerinde kaybolmaya son! PioNotes ile tüm notlarınızı ve şablonlarınızı desteğin aşamalarına veya konularına göre klasörleyin.</p>
+          <ul class="feature-list">
+            <li data-translate="slide4_feat1"><strong>Emoji Desteği:</strong> Klasörlerinizi dilediğiniz emojiyle (📁, 💬, 🛠️, 🍑) özelleştirin.</li>
+            <li data-translate="slide4_feat2"><strong>Sürükle ve Bırak:</strong> Notlarınızı ve klasörlerinizi mouse ile sürükleyerek dilediğiniz sıraya dizin veya notları klasörler arasında taşıyın.</li>
+            <li data-translate="slide4_feat3"><strong>Akıllı Sayaçlar:</strong> Hangi klasörde kaç adet şablon bulunduğunu anında görün.</li>
+          </ul>
+        </div>
+        <div class="slide-visual">
+          <div class="screenshot-frame">
+            <img class="screenshot-img" src="images/sidebar_view.png" alt="PioNotes Sidebar View">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 1-CLICK COPY & EASY EDIT -->
+      <section class="slide" id="slide-5">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide5_cat">Kullanılabilirlik</div>
+          <h2 class="slide-title" data-translate="slide5_title">Tek Tıkla Kopyala & Agent Dostu Düzenleyici</h2>
+          <p class="slide-description" data-translate="slide5_desc">Operasyonel hızı en üst düzeye çıkarmak için tasarlandı. Şablonu seçip kopyalamak sadece bir milisaniye sürer.</p>
+          <ul class="feature-list">
+            <li data-translate="slide5_feat1"><strong>Tek Tıkla Kopyala:</strong> Kartın herhangi bir yerine tıklamanız yeterlidir. İçerik panoya kopyalanır ve MX Chat'e doğrudan yapıştırılabilir.</li>
+            <li data-translate="slide5_feat2"><strong>Zengin Metin Editörü (Rich Editor):</strong> Kalın, italik, altı çizili veya maddeli listeleri doğrudan eklenti içinden editleyin.</li>
+            <li data-translate="slide5_feat3"><strong>Kart Renkleri:</strong> Notlarınızı 7 farklı renk seçeneğiyle önem derecesine göre gruplayın.</li>
+          </ul>
+        </div>
+        <div class="slide-visual">
+          <!-- Interactive interactive widget demo -->
+          <div class="ui-demo-widget">
+            <div class="demo-header">
+              <div class="demo-title" id="sim-title" data-translate="slide5_vtitle">🎯 Tıkla ve Kopyala Simülatörü</div>
+              <div class="demo-dots">
+                <div class="demo-dot" style="background:#f87171;"></div>
+                <div class="demo-dot" style="background:#fb923c;"></div>
+                <div class="demo-dot" style="background:#34d399;"></div>
+              </div>
+            </div>
+            <div class="demo-content-box">
+              <div class="demo-card" id="sim-card-1" data-sim="1">
+                <div class="demo-card-title" id="sim-card-1-title" data-translate="slide5_card1_title">🇩🇪 Karşılama Şablonu (Tıkla)</div>
+                <div class="demo-card-text" id="sim-card-1-text" data-translate="slide5_card1_text">Merhaba, ben Samsung Almanya ekibinden Benjamin...</div>
+                <div class="demo-click-badge" data-translate="slide5_badge">Tıkla & Kopyala</div>
+              </div>
+              <div class="demo-card" id="sim-card-2" style="border-left-color: var(--accent-orange);" data-sim="2">
+                <div class="demo-card-title" id="sim-card-2-title" data-translate="slide5_card2_title">🇩🇪 Mesai Dışı Şablonu (Tıkla)</div>
+                <div class="demo-card-text" id="sim-card-2-text" data-translate="slide5_card2_text">Bu konuyla ilgili uzman departmanımız şu anda kapalıdır...</div>
+                <div class="demo-click-badge" data-translate="slide5_badge">Tıkla & Kopyala</div>
+              </div>
+            </div>
+            <div id="demo-copy-toast" style="margin-top: 12px; font-size: 0.8rem; text-align: center; color: #34d399; font-weight: 600; opacity: 0; transition: opacity 0.3s;" data-translate="slide5_toast">
+              Panoya Kopyalandı! 📋 (Zengin Metin + Düz Metin)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: BACKUP & INTEGRABILITY -->
+      <section class="slide" id="slide-6">
+        <div class="slide-text">
+          <div class="slide-category" data-translate="slide6_cat">Veri Güvenliği</div>
+          <h2 class="slide-title" data-translate="slide6_title">Yedekle, İçe Aktar ve Takım Arkadaşlarınla Paylaş</h2>
+          <p class="slide-description" data-translate="slide6_desc">Tüm hazırladığınız not setlerini ve şablonlarınızı tek tuşla dışa aktarabilirsiniz. Bilgisayar değişimi veya tarayıcı sıfırlanmasında verileriniz asla kaybolmaz.</p>
+          <ul class="feature-list">
+            <li data-translate="slide6_feat1"><strong>Yedek İndir (Export):</strong> Tüm notlarınızı, klasör yapınızı ve ayarlarınızı tek tıkla <code>.json</code> dosyası olarak kaydedin.</li>
+            <li data-translate="slide6_feat2"><strong>Yedek Yükle (Import):</strong> Yedek dosyasını yükleyerek saniyeler içinde tüm şablonlarınızı geri yükleyin.</li>
+            <li data-translate="slide6_feat3"><strong>Kolay Paylaşım:</strong> Hazırladığınız şablon setlerini diğer temsilcilerle paylaşarak tüm ekibin aynı hıza ulaşmasını sağlayın.</li>
+          </ul>
+          <a href="sidepanel.html" class="cta-btn">
+            <span data-translate="slide6_cta">PioNotes'u Şimdi Deneyin</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="slide-visual">
+          <div style="text-align: center; background: rgba(251, 146, 60, 0.05); padding: 35px; border-radius: var(--border-radius-md); border: 1px dashed var(--accent-orange); width: 100%;">
+            <div style="font-size: 4.5rem; margin-bottom: 15px;">🔄</div>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: var(--accent-orange);" data-translate="slide6_vtitle">%100 Taşınabilirlik</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;" data-translate="slide6_vdesc">Ekibinizle yedek dosyalarını paylaşarak ortak bir kurumsal dil oluşturun, yeni başlayan temsilcilerin uyum sürecini sıfıra indirin.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Controls & Indicators -->
+    <div class="controls-wrapper">
+      <div class="dot-indicators" id="dot-indicators">
+        <span class="indicator-dot active" data-index="0"></span>
+        <span class="indicator-dot" data-index="1"></span>
+        <span class="indicator-dot" data-index="2"></span>
+        <span class="indicator-dot" data-index="3"></span>
+        <span class="indicator-dot" data-index="4"></span>
+        <span class="indicator-dot" data-index="5"></span>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn" disabled>
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="nav-btn" id="next-btn">
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p data-translate="footer_credit">NOT_IZM_90220 tarafından Dünya'da sevgiyle üretildi 2026</p>
+  </footer>
+
+  <!-- External Script for compliance with Chrome Extensions Content Security Policy -->
+  <script src="presentation.js"></script>
+</body>
+</html>
