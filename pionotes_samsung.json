@@ -1,0 +1,395 @@
+{
+    "app":  "PioNotes",
+    "version":  "1.0.0",
+    "backupDate":  1781131431216,
+    "folders":  [
+                    {
+                        "id":  "f_1",
+                        "name":  "Karşılama",
+                        "emoji":  "⭐"
+                    },
+                    {
+                        "id":  "f_2",
+                        "name":  "Yönlendirme",
+                        "emoji":  "⏩"
+                    },
+                    {
+                        "id":  "f_3",
+                        "name":  "Kapanış",
+                        "emoji":  "✅"
+                    },
+                    {
+                        "id":  "f_4",
+                        "name":  "Hard Reset",
+                        "emoji":  "🔄"
+                    },
+                    {
+                        "id":  "f_5",
+                        "name":  "Teşhis Taraması",
+                        "emoji":  "🔎"
+                    },
+                    {
+                        "id":  "f_6",
+                        "name":  "Self Troubleshooting",
+                        "emoji":  "⚙️"
+                    },
+                    {
+                        "id":  "f_7",
+                        "name":  "Tamir Takip",
+                        "emoji":  "➡️"
+                    },
+                    {
+                        "id":  "f_8",
+                        "name":  "Smart Repair",
+                        "emoji":  "🛠️"
+                    },
+                    {
+                        "id":  "f_9",
+                        "name":  "Send-In",
+                        "emoji":  "📦"
+                    },
+                    {
+                        "id":  "f_10",
+                        "name":  "Spare-Part Mağazası",
+                        "emoji":  "📌"
+                    },
+                    {
+                        "id":  "f_11",
+                        "name":  "Samsung Care+",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_12",
+                        "name":  "Güvenli Mod",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_13",
+                        "name":  "PL Durumu",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_14",
+                        "name":  "Google FRP Kilidi",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_15",
+                        "name":  "Samsung Telefon Numarası",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_16",
+                        "name":  "Öneri Bölümü",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_17",
+                        "name":  "Remote Access",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_18",
+                        "name":  "Güvenlik Güncellemeleri",
+                        "emoji":  "🚨"
+                    },
+                    {
+                        "id":  "f_19",
+                        "name":  "Kayıp/Çalıntı",
+                        "emoji":  "⚠️"
+                    },
+                    {
+                        "id":  "f_20",
+                        "name":  "E-Posta İletişim",
+                        "emoji":  "⚠️"
+                    }
+                ],
+    "notes":  [
+                  {
+                      "id":  "note_1",
+                      "folderId":  "f_1",
+                      "title":  "Merhaba , ben Samsung Alman...",
+                      "content":  "\u003cdiv\u003eMerhaba , ben Samsung Almanya Team Deutschland\u0026#39;dan\u0026nbsp;\u0026nbsp;Benjamin. Sana yardımcı olabilmek i\u0026#231;in \u0026#246;nceki mesajlarını okumak istiyorum. L\u0026#252;tfen bekler misin?\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131430144
+                  },
+                  {
+                      "id":  "note_2",
+                      "folderId":  "f_1",
+                      "title":  "Sana nasıl yardımcı olabili...",
+                      "content":  "\u003cdiv\u003eSana nasıl yardımcı olabilirim? Bana daha fazla detay verir misin? Bu konuyu araştırmak istiyorum.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131429144
+                  },
+                  {
+                      "id":  "note_3",
+                      "folderId":  "f_1",
+                      "title":  "Konuyla ilgili kısa bir ara...",
+                      "content":  "\u003cdiv\u003eKonuyla ilgili kısa bir araştırma yapıyorum. L\u0026#252;tfen bekler misin?\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131428144
+                  },
+                  {
+                      "id":  "note_4",
+                      "folderId":  "f_1",
+                      "title":  "Karşılaştığın bu durum için...",
+                      "content":  "\u003cdiv\u003eKarşılaştığın bu durum i\u0026#231;in ben araştırmamı yaparken aynı zamanda karşılaştığın bu durumu şahsım adına telafi edebilmek i\u0026#231;in mobil cihazlar ve aksesuarlarda ge\u0026#231;erli %5 oranında bir indirim kuponu paylaşmak istiyorum. Eğer ilgileniyorsan benimle İsim Soyisim ve E-Posta adresini paylaşabilirsin.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131427144
+                  },
+                  {
+                      "id":  "note_5",
+                      "folderId":  "f_1",
+                      "title":  "Bu konuyla ilgili uzman dep...",
+                      "content":  "\u003cdiv\u003eBu konuyla ilgili uzman departman şu anda kapalı olduğu i\u0026#231;in malesef şu anda destek olamıyorum. L\u0026#252;tfen Pazartesi mesai saatleri i\u0026#231;erisinde (09:00 - 18:00 arasında) tekrardan iletişime ge\u0026#231;er misin?\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131426144
+                  },
+                  {
+                      "id":  "note_6",
+                      "folderId":  "f_2",
+                      "title":  "Seni bu konuda uzman bir de...",
+                      "content":  "\u003cdiv\u003eSeni bu konuda uzman bir departmana y\u0026#246;nlendiriyorum. İyi g\u0026#252;nler dilerim! :)\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131425191
+                  },
+                  {
+                      "id":  "note_7",
+                      "folderId":  "f_3",
+                      "title":  "Samsung Mobil cihazlar ve A...",
+                      "content":  "\u003cdiv\u003eSamsung Mobil cihazlar ve Aksesuarlarda Samsung Online Mağazasında ge\u0026#231;erli %5 oranında indirim kuponunu seninle paylaşmak istiyorum. İlgileniyor musun? Eğer ilgileniyorsan benimle,\u003c/div\u003e\u003cdiv\u003eİsim Soyisim - E-Posta adresi paylaşırsan, kodu email adresine y\u0026#246;nlendirebilirim.🎉🛍️✨\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131424192
+                  },
+                  {
+                      "id":  "note_8",
+                      "folderId":  "f_3",
+                      "title":  "Karşılaştığın bu durumu şah...",
+                      "content":  "\u003cdiv\u003eKarşılaştığın bu durumu şahsım adına telafi edebilmek i\u0026#231;in,\u0026nbsp;\u0026nbsp;Samsung Mobil cihazlar ve Aksesuarlarda Samsung Online Mağazasında ge\u0026#231;erli %5 oranında indirim kuponunu seninle paylaşmak istiyorum. İlgileniyor musun? Eğer ilgileniyorsan benimle, İsim Soyisim - E-Posta adresi paylaşırsan, kodu email adresine y\u0026#246;nlendirebilirim.🎉🛍️✨\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131423192
+                  },
+                  {
+                      "id":  "note_9",
+                      "folderId":  "f_3",
+                      "title":  "%5 Oranında Mobil cihazlar ...",
+                      "content":  "\u003cdiv\u003e%5 Oranında Mobil cihazlar ve Aksesuarlarda ge\u0026#231;erli indirim kuponunu seninle paylaştım! :) E-Posta Gelen kutunu kontrol edebilirsin.🎁\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131422192
+                  },
+                  {
+                      "id":  "note_10",
+                      "folderId":  "f_3",
+                      "title":  "Samsung\u0027a başvurduğun için ...",
+                      "content":  "\u003cdiv\u003eSamsung\u0026#39;a başvurduğun i\u0026#231;in teşekk\u0026#252;rler! Hizmetimi değerlendirme fırsatın var. L\u0026#252;tfen değerlendirmeni \u0026#252;r\u0026#252;n değil, sana sunduğum destek hizmetine dayandır. Umarım bug\u0026#252;n senden 10 puan almayı hak etmişimdir! İyi g\u0026#252;nler dilerim. :) ✨\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131421192
+                  },
+                  {
+                      "id":  "note_11",
+                      "folderId":  "f_3",
+                      "title":  "Sana bu konuda yardımcı ola...",
+                      "content":  "\u003cdiv\u003eSana bu konuda yardımcı olamadığım i\u0026#231;in \u0026#231;ok \u0026#252;zg\u0026#252;n\u0026#252;m. Bu g\u0026#246;r\u0026#252;şmeyi sonlandırırken, değerlendirme anketinde \u0026#252;r\u0026#252;nden dolayı değil sana sağladığım destekten dolayı bana 9 veya 10 puan verir misin? Bu beni mutlu eder. \u0026#199;ok teşekk\u0026#252;r ederim. İyi g\u0026#252;nler!\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131420192
+                  },
+                  {
+                      "id":  "note_12",
+                      "folderId":  "f_3",
+                      "title":  "Sana yardımcı olabilmek içi...",
+                      "content":  "\u003cdiv\u003eSana yardımcı olabilmek i\u0026#231;in elimden gelenin tamamını yaptım. Bu g\u0026#246;r\u0026#252;şmeyi sonlandırırken, değerlendirme anketinde \u0026#252;r\u0026#252;nden dolayı değil sana sağladığım destekten dolayı bana 9 veya 10 puan verir misin? Bu beni mutlu eder. \u0026#199;ok teşekk\u0026#252;r ederim. İyi g\u0026#252;nler!\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131419192
+                  },
+                  {
+                      "id":  "note_13",
+                      "folderId":  "f_3",
+                      "title":  "Hareketsizlik nedeniyle soh...",
+                      "content":  "\u003cdiv\u003eHareketsizlik nedeniyle sohbeti şimdilik sonlandırıyorum. :) Eğer talebin hen\u0026#252;z sonu\u0026#231;lanmadıysa, \u0026#39;Sohbete devam et\u0026#39; butonuna tıklayarak doğrudan kaldığımız yerden devam edebiliriz. Talebin \u0026#231;\u0026#246;z\u0026#252;ld\u0026#252;ğ\u0026#252; durumda ise, sana yardımcı olabildiğim i\u0026#231;in mutluyum. Hemen ardından beni oylayabilirsin. Bu değerlendirme benim i\u0026#231;in \u0026#231;ok değerli; hakkımdaki memnuniyet anketine katılıp beni 9 veya 10 ile puanlarsan \u0026#231;ok sevinirim. Hoş sohbetin i\u0026#231;in \u0026#231;ok teşekk\u0026#252;rler, iyi g\u0026#252;nler dilerim! 🙂\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131418192
+                  },
+                  {
+                      "id":  "note_14",
+                      "folderId":  "f_4",
+                      "title":  "Cihazının kilitlendiğini du...",
+                      "content":  "\u003cdiv\u003eCihazının kilitlendiğini duymak ger\u0026#231;ekten \u0026#231;ok \u0026#252;z\u0026#252;c\u0026#252;. Bu konuda cihaza erişimi tekrar sağlayacak tek y\u0026#246;ntem, cihaza hard reset işlemi uygulamaktır. Hard reset işlemi, cihazdaki daha \u0026#246;ncesinde yedeklenmemiş olan verilerin silinmesine neden olacaktır.\u003c/div\u003e\u003cdiv\u003eHard reset hakkında bilgi i\u0026#231;in: -\u0026gt; https://www.samsung.com/de/support/samsung-smartphone-fehlerbehebung/#forgot_password\u003c/div\u003e\u003cdiv\u003eBu \u0026#231;\u0026#246;z\u0026#252;mden başka bir \u0026#231;\u0026#246;z\u0026#252;m malesef mevcut değildir.\u003c/div\u003e",
+                      "color":  "purple",
+                      "createdAt":  1781131417193
+                  },
+                  {
+                      "id":  "note_15",
+                      "folderId":  "f_4",
+                      "title":  "Benimle görüşen Samsung\u0027un ...",
+                      "content":  "\u003cdiv\u003eBenimle g\u0026#246;r\u0026#252;şen Samsung\u0026#39;un değerli m\u0026#252;şterilerine her zaman veri yedeklemenin \u0026#246;neminden bahsediyorum. Haftada bir kere Smart Switch \u0026#252;zerinden sağlayacağın yedekleme işlemi ile bu tarz problemlerden tamamen uzak kalırsın.\u003c/div\u003e",
+                      "color":  "purple",
+                      "createdAt":  1781131416193
+                  },
+                  {
+                      "id":  "note_16",
+                      "folderId":  "f_5",
+                      "title":  "Lütfen cihazında Samsung Me...",
+                      "content":  "\u003cdiv\u003eL\u0026#252;tfen cihazında Samsung Members App \u0026#220;zerinden teşhis taraması ger\u0026#231;ekleştirir misin? Sonu\u0026#231;ları tamamlanınca benimle paylaşabilirsin.\u003c/div\u003e\u003cdiv\u003eBu konuda bilgi bulabileceğin bir link: https://www.samsung.com/de/support/mobile-devices/nutzung-der-diagnose-funktion-von-samsung-members/\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131415194
+                  },
+                  {
+                      "id":  "note_17",
+                      "folderId":  "f_6",
+                      "title":  "Karşılaştığın durum için üz...",
+                      "content":  "\u003cdiv\u003eKarşılaştığın durum i\u0026#231;in \u0026#252;zg\u0026#252;n\u0026#252;m. L\u0026#252;tfen sana g\u0026#246;ndereceğim linkteki soruları ve işlemleri eksiksiz bir şekilde tamamlayıp, en sonunda \u0026#231;ıkan 6 haneli kodu benimle paylaşır mısın?\u003c/div\u003e",
+                      "color":  "grey",
+                      "createdAt":  1781131414194
+                  },
+                  {
+                      "id":  "note_18",
+                      "folderId":  "f_7",
+                      "title":  "Cihazının tamir durumunu ko...",
+                      "content":  "\u003cdiv\u003eCihazının tamir durumunu kontrol edebilmem adına benimle \u0026quot;42\u0026quot; ile başlayan tamir numaranı paylaşır mısın?\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131413195
+                  },
+                  {
+                      "id":  "note_19",
+                      "folderId":  "f_8",
+                      "title":  "Çözüm için inceleme yapabil...",
+                      "content":  "\u003cdiv\u003e\u0026#199;\u0026#246;z\u0026#252;m i\u0026#231;in inceleme yapabilmem adına bana ilgili cihazın IMEI1 veya Seri numarasını paylaşır mısın? IMEI1 i\u0026#231;in; -\u0026gt; \u0026#199;ağrı numara tuşlama ekranında *#06# Seri Numarası i\u0026#231;in; -\u0026gt; Ayarlar - Telefon/Tablet Hakkında\u003c/div\u003e\u003cdiv\u003eBu bilgileri yazı yoluyla paylaşman \u0026#246;nemli.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131412196
+                  },
+                  {
+                      "id":  "note_20",
+                      "folderId":  "f_8",
+                      "title":  "Cihazının tamir siparişini ...",
+                      "content":  "\u003cdiv\u003eCihazının tamir siparişini sağlayabilmen i\u0026#231;in, bu bağlantıyı takip edebilirsin. -\u0026gt; \u003c/div\u003e\u003cdiv\u003ehttps://www.samsung.com/de/support/smart-repair-service/\u003c/div\u003e\u003cdiv\u003eAyrıca cihazın tamir s\u0026#252;recinde sıfırlanacağı i\u0026#231;in, cihazdaki \u0026#246;nemli verileri yedeklemeni tavsiye ediyorum. Yedekleme ve Smart Switch hakkında bilgi almak i\u0026#231;in, -\u0026gt;\u003c/div\u003e\u003cdiv\u003ehttps://www.samsung.com/de/support/apps-services/wie-uebertrage-ich-daten-mit-smart-switch/\u003c/div\u003e\u003cdiv\u003eSmart Repair hakkında Sık\u0026#231;a Sorulan Sorulara ve cevaplara ulaşmak i\u0026#231;in, -\u0026gt;\u003c/div\u003e\u003cdiv\u003ehttps://www.samsung.com/de/support/smart-repair-tipps/\u003c/div\u003e\u003cdiv\u003eBağlantılarını takip edebilirsin.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131411196
+                  },
+                  {
+                      "id":  "note_21",
+                      "folderId":  "f_8",
+                      "title":  "Şimdi sana söyleyeceğim eta...",
+                      "content":  "\u003cdiv\u003eŞimdi sana s\u0026#246;yleyeceğim etapları tek tek takip eder misin?\u003c/div\u003e\u003cdiv\u003e1- Samsung Websitesi \u0026#252;zerinden hesabına giriş yap.\u003c/div\u003e\u003cdiv\u003e2- Sağdaki a\u0026#231;ılır men\u0026#252;den \u0026quot;My Products\u0026quot; b\u0026#246;l\u0026#252;m\u0026#252;ne ge\u0026#231;.\u003c/div\u003e\u003cdiv\u003e3- A\u0026#231;ılan b\u0026#246;l\u0026#252;mden tamir siparişi oluşturmak cihazını bulunduğu tablonun sağ \u0026#252;st\u0026#252;nde bulunan X ikonu ile kaldır.\u003c/div\u003e\u003cdiv\u003e4- Sayfayı yenile.\u003c/div\u003e\u003cdiv\u003e5- Cihazı tekrardan hesabına kaydet.\u003c/div\u003e\u003cdiv\u003e6- Tekrar sipariş vermeyi dene.\u003c/div\u003e\u003cdiv\u003eBu yardımcı olacaktır\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131410196
+                  },
+                  {
+                      "id":  "note_22",
+                      "folderId":  "f_8",
+                      "title":  "https://samsung-repair.de/d...",
+                      "content":  "\u003cdiv\u003ehttps://samsung-repair.de/de Bu sayfadan cihazın i\u0026#231;in servis otob\u0026#252;s\u0026#252; siparişi sağlayabilirsin. Siparişi ger\u0026#231;ekleştirdiğin tarihte teknisyenlerimiz bir servis aracıyla adresine gelip, cihazını adresinde inceleyecekler.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131409196
+                  },
+                  {
+                      "id":  "note_23",
+                      "folderId":  "f_9",
+                      "title":  "Çözüm için inceleme yapabil...",
+                      "content":  "\u003cdiv\u003e\u0026#199;\u0026#246;z\u0026#252;m i\u0026#231;in inceleme yapabilmem adına bana ilgili cihazın IMEI1 veya Seri numarasını paylaşır mısın?\u003c/div\u003e\u003cdiv\u003eIMEI1 i\u0026#231;in; -\u0026gt; \u0026#199;ağrı numara tuşlama ekranında *#06#\u003c/div\u003e\u003cdiv\u003eSeri Numarası i\u0026#231;in; -\u0026gt; Ayarlar - Telefon/Tablet Hakkında\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131408198
+                  },
+                  {
+                      "id":  "note_24",
+                      "folderId":  "f_9",
+                      "title":  "Bağlantıyı takip ederek cih...",
+                      "content":  "\u003cdiv\u003eBağlantıyı takip ederek cihazını tamir i\u0026#231;in g\u0026#246;nderebilirsin. -\u0026gt;\u003c/div\u003e\u003cdiv\u003ehttps://www.samsung.com/de/support/mobile-devices/mobilgeraet-einsenden/\u003c/div\u003e\u003cdiv\u003e\u0026#214;ncesinde servis merkezine mail atıp bilgilendirmeyi l\u0026#252;tfen unutma. -\u0026gt;\u003c/div\u003e\u003cdiv\u003e w-support.com GmbH\u003c/div\u003e\u003cdiv\u003eKOMSA Allee 1\u003c/div\u003e\u003cdiv\u003e09232 Hartmannsdorf\u003c/div\u003e\u003cdiv\u003eDeutschland\u003c/div\u003e\u003cdiv\u003eAyrıca tamir işlemi cihazındaki verileri sıfırlayacağı i\u0026#231;in, m\u0026#252;mk\u0026#252;nse cihazındaki verileri yedeklemeni \u0026#246;nemle \u0026#246;neriyorum.\u003c/div\u003e",
+                      "color":  "blue",
+                      "createdAt":  1781131407198
+                  },
+                  {
+                      "id":  "note_25",
+                      "folderId":  "f_10",
+                      "title":  "https://samsung.sparepartse...",
+                      "content":  "\u003cdiv\u003ehttps://samsung.sparepartservice.shop/ Bu bağlantıyı takip ederek, cihazın i\u0026#231;in yedek par\u0026#231;aları bulabilirsin.\u003c/div\u003e",
+                      "color":  "green",
+                      "createdAt":  1781131406199
+                  },
+                  {
+                      "id":  "note_26",
+                      "folderId":  "f_11",
+                      "title":  "Samsung Care+ ile ilgili ya...",
+                      "content":  "\u003cdiv\u003eSamsung Care+ ile ilgili yardıma ihtiyacınız varsa, l\u0026#252;tfen aşağıdaki ekiple iletişime ge\u0026#231;in.\u003c/div\u003e\u003cdiv\u003eSamsung Care+ ekibi +49\u003c/div\u003e\u003cdiv\u003e6196 7755514 (Pzt-Cuma 9:00-18:00) numaralı telefondan veya SMC@samsung.de adresinden e-posta yoluyla ulaşabilirsiniz.\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131405199
+                  },
+                  {
+                      "id":  "note_27",
+                      "folderId":  "f_12",
+                      "title":  "Cihazını güvenli mod ile ba...",
+                      "content":  "\u003cdiv\u003eCihazını g\u0026#252;venli mod ile başlatır mısın? Bu problemin \u0026#252;\u0026#231;\u0026#252;nc\u0026#252; parti bir uygulama tarafından kaynaklanıp kaynaklanmadığını g\u0026#246;sterecektir. G\u0026#252;venli mod hakkında bilgi i\u0026#231;in: https://www.samsung.com/de/support/mobile-devices/was-ist-der-sichere-modus-und-wie-nutze-ich-ihn-bei-meinem-samsung-smartphone/\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131404200
+                  },
+                  {
+                      "id":  "note_28",
+                      "folderId":  "f_13",
+                      "title":  "Bu konuda lütfen en kısa sü...",
+                      "content":  "\u003cdiv\u003eBu konuda l\u0026#252;tfen en kısa s\u0026#252;re i\u0026#231;erisinde, Durumu a\u0026#231;ıklayan bir a\u0026#231;ıklama metni ile İsim Soyisim - Telefon Numarası - Adres - E-posta Adresi - Cihazın Model, Seri ve (varsa) IMEI1 numarası\u0026#39;nı\u0026nbsp;\u0026nbsp;PL@samsung.de adresine mail g\u0026#246;nderir misin?\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131403200
+                  },
+                  {
+                      "id":  "note_29",
+                      "folderId":  "f_14",
+                      "title":  "Google FRP kilidi, cihazlar...",
+                      "content":  "\u003cdiv\u003eGoogle FRP kilidi, cihazlarda ilk kurulan Google hesabıyla birlikte a\u0026#231;ılır. Bu kilidi ge\u0026#231;mek i\u0026#231;in, bu Google hesabı ile giriş yapman gerekiyor. Eğer cihazında bu hesabı bilmiyorsan veya erişimi kaybettiysen bu konuyla ilgili Google ile iletişime ge\u0026#231;men gerekiyor.\u003c/div\u003e\u003cdiv\u003eGoogle ile iletişime ge\u0026#231;ebileceğin bir link: https://support.google.com/chat/?hl=de \u003c/div\u003e\u003cdiv\u003eGoogle hesabınıza hi\u0026#231; erişemiyorsanız, alternatif olarak \u0026#252;cret karşılığında bize g\u0026#246;ndererek kilidini a\u0026#231;tırabilirsin \u0026#214;nemli: Satın alma belgesinin bir kopyasını da eklemelisin ve kilidin a\u0026#231;ılması, geri d\u0026#246;n\u0026#252;ş\u0026#252; olmayan bir veri kaybına neden olur.\u003c/div\u003e\u003cdiv\u003eCihazı g\u0026#246;ndermek i\u0026#231;in, https://www.samsung.com/de/support/smart-repair-service/\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131402201
+                  },
+                  {
+                      "id":  "note_30",
+                      "folderId":  "f_15",
+                      "title":  "https://www.samsung.com/de/...",
+                      "content":  "\u003cdiv\u003ehttps://www.samsung.com/de/support/contact - Bu bağlantıdan, \u0026quot;Product Support\u0026quot; Kısmına tıkla, Ardından \u0026quot;Smartphones, Tablets, Wearables\u0026quot; b\u0026#246;l\u0026#252;m\u0026#252;ne tıkla ve. Aşağıdaki \u0026quot;Contact Us\u0026quot; b\u0026#246;l\u0026#252;m\u0026#252;nden, Hotline General kısmında \u0026quot;Call The Hotline\u0026quot; b\u0026#246;l\u0026#252;m\u0026#252;ne tıklayarak numarayı g\u0026#246;r\u0026#252;nt\u0026#252;leyip arayabilirsin.\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131401214
+                  },
+                  {
+                      "id":  "note_31",
+                      "folderId":  "f_16",
+                      "title":  "Kullandığın cihaz gerçekten...",
+                      "content":  "\u003cdiv\u003eKullandığın cihaz ger\u0026#231;ekten de b\u0026#252;y\u0026#252;k bir m\u0026#252;hendislik i\u0026#231;eren iyi bir cihaz. Ayrıca m\u0026#252;şterilerime \u0026quot;Hangi \u0026#246;zellik olsaydı veya gelecekte hangi \u0026#246;zelliği cihazında bulsaydın bu seni heyecanlandırırdı?\u0026quot; diye soruyorum ve bu soruyu sana da y\u0026#246;nlendirmek istiyorum.\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131400214
+                  },
+                  {
+                      "id":  "note_32",
+                      "folderId":  "f_17",
+                      "title":  "Bu konuda, cihazının bir uz...",
+                      "content":  "\u003cdiv\u003eBu konuda, cihazının bir uzman tarafından uzaktan incelenmesi ve bu probleme bir \u0026#231;\u0026#246;z\u0026#252;m aranması gerekiyor. G\u0026#246;ndereceğim linkteki y\u0026#246;nergeleri takip ederek, Senin i\u0026#231;in uygun bir vakit i\u0026#231;in uzaktan bağlantı desteği alabilirsin. Remote Service i\u0026#231;in gerekli t\u0026#252;m bilgiler i\u0026#231;in; https://www.samsung.com/de/support/remoteservice/\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131399215
+                  },
+                  {
+                      "id":  "note_33",
+                      "folderId":  "f_18",
+                      "title":  "https://security.samsungmob...",
+                      "content":  "\u003cdiv\u003ehttps://security.samsungmobile.com/workScope.smsb Cihazın ile ilgili t\u0026#252;m g\u0026#252;venlik g\u0026#252;ncellemeleri bilgisini bu linkten sağlayabilirsin. G\u0026#252;ncellemelerin, Mobil operat\u0026#246;rlerce dağıtıldığını g\u0026#246;z \u0026#246;n\u0026#252;ne alarak, g\u0026#252;ncelleme tarihlerinde bazı k\u0026#252;\u0026#231;\u0026#252;k değişikliklerin g\u0026#246;r\u0026#252;nebileceğini belirtmek isterim.\u003c/div\u003e",
+                      "color":  "red",
+                      "createdAt":  1781131398215
+                  },
+                  {
+                      "id":  "note_34",
+                      "folderId":  "f_19",
+                      "title":  "Karşılaştığın durum için ge...",
+                      "content":  "\u003cdiv\u003eKarşılaştığın durum i\u0026#231;in ger\u0026#231;ekten de \u0026#231;ok \u0026#252;zg\u0026#252;n\u0026#252;m.\u003c/div\u003e\u003cdiv\u003eCihazını Smart Things Find \u0026#252;zerinden bulmayı veya sıfırlamayı deneyebilirsin. -\u0026gt; \u003c/div\u003e\u003cdiv\u003ehttps://www.samsung.com/de/support/apps-services/smartthings-find-nutzen/\u003c/div\u003e\u003cdiv\u003eAyrıca, Google Find My Device ile de bazı işlemleri ger\u0026#231;ekleştirebilirsin.\u003c/div\u003e\u003cdiv\u003eEn hızlı şekilde \u0026#231;\u0026#246;z\u0026#252;m sağlayabilmek adına,\u003c/div\u003e\u003cdiv\u003eSana bir email g\u0026#246;ndereceğim. İstenilen belgeleri ve bilgileri maile cevap olarak eklediğinde cihazını kara listeye ekletebilirsin. Benimle E-posta adresini paylaşır mısın?\u003c/div\u003e",
+                      "color":  "orange",
+                      "createdAt":  1781131397216
+                  },
+                  {
+                      "id":  "note_35",
+                      "folderId":  "f_20",
+                      "title":  "E-Mail ile iletişime geçmek...",
+                      "content":  "\u003cdiv\u003eE-Mail ile iletişime ge\u0026#231;mek i\u0026#231;in, https://www.samsung.com/de/support/anleitung-e-mail-kontakt/ bu linki takip edebilirsin.\u003c/div\u003e",
+                      "color":  "orange",
+                      "createdAt":  1781131396216
+                  }
+              ],
+    "settings":  {
+                     "theme":  "dark",
+                     "activeFolderId":  "all",
+                     "malatyaUnlocked":  false,
+                     "caglaUnlocked":  false
+                 }
+}
