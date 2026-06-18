@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PioNotes - Zengin Metin & Dikey Klasör</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body class="dark-theme"> <!-- Varsayılan olarak premium koyu tema -->
+
+  <div class="app-layout">
+    
+    <!-- LEFT SIDEBAR: VERTICAL FOLDERS -->
+    <aside class="sidebar-folders">
+      <div class="sidebar-logo-wrapper" style="position: relative;">
+        <div class="sidebar-logo" title="PioNotes">
+          <span class="logo-icon">P<span>N</span></span>
+        </div>
+        <span id="logo-peach" class="logo-peach hidden">🍑</span>
+        <span id="logo-flower" class="logo-flower hidden">🌸</span>
+      </div>
+      
+      <div class="sidebar-divider"></div>
+      
+      <!-- Folders Navigation List -->
+      <div class="vertical-folders-list" id="sidebar-folders-list">
+        <!-- Javascript ile doldurulacak -->
+      </div>
+      
+      <!-- Sidebar Bottom Actions Wrapper -->
+      <div class="sidebar-bottom-actions">
+        <!-- Add Folder Button -->
+        <button id="sidebar-add-folder-btn" class="sidebar-action-btn" title="Yeni Klasör Ekle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <!-- Settings Button -->
+        <button id="sidebar-settings-btn" class="sidebar-action-btn" title="PioNotes Ayarları">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- RIGHT SIDE: MAIN CONTENT PANEL -->
+    <main class="main-content">
+      
+      <header class="app-header">
+        <div class="logo-area">
+          <h1>Pio<span>Notes</span><span id="header-peach" class="header-peach hidden">🍑</span><span id="header-flower" class="header-flower hidden">🌸</span></h1>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle-btn" class="icon-btn" title="Tema Değiştir">
+            <!-- Moon Icon -->
+            <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <!-- Sun Icon -->
+            <svg class="icon sun-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- SEARCH & CONTROLS -->
+      <section class="controls-section">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="search-input" placeholder="Notlarda ara...">
+          <button id="clear-search-btn" class="clear-btn hidden" title="Aramayı Temizle">&times;</button>
+        </div>
+
+        <div class="action-buttons">
+          <button id="add-note-btn" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Not Ekle
+          </button>
+        </div>
+      </section>
+
+      <!-- NOTES LIST GRID -->
+      <section class="notes-section">
+        <div class="section-title-row">
+          <h2 id="current-folder-title">Tüm Notlar</h2>
+          <span class="info-badge" id="note-count">0 Not</span>
+        </div>
+        
+        <div class="notes-grid" id="notes-container">
+          <!-- Javascript ile doldurulacak -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="empty-state-view">
+          <div class="empty-state-icon">📝</div>
+          <h3>Henüz not bulunamadı</h3>
+          <p>Yeni bir not yazarak başlayın veya farklı bir klasöre göz atın.</p>
+          <button id="empty-add-btn" class="btn btn-primary btn-sm">İlk Notu Ekle</button>
+        </div>
+      </section>
+
+      <!-- App Footer Credit -->
+      <footer class="app-footer">
+        <p id="footer-credit">NOT_IZM_90220 tarafından Dünya'da sevgiyle üretildi 2026</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- NOTE MODAL (ADD & EDIT WITH RICH TEXT & COLORS) -->
+  <div class="modal-backdrop hidden" id="note-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Yeni Not Oluştur</h3>
+        <button class="modal-close-btn" id="close-note-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="note-title-input">Başlık</label>
+          <input type="text" id="note-title-input" placeholder="Not başlığı (isteğe bağlı)...">
+        </div>
+        
+        <!-- RICH TEXT EDITOR GROUP -->
+        <div class="form-group">
+          <label>İçerik <span class="required">*</span></label>
+          
+          <div class="rich-toolbar">
+            <button type="button" class="toolbar-btn" data-command="bold" title="Kalın (Ctrl+B)"><b>B</b></button>
+            <button type="button" class="toolbar-btn" data-command="italic" title="İtalik (Ctrl+I)"><i>I</i></button>
+            <button type="button" class="toolbar-btn" data-command="underline" title="Altı Çizili (Ctrl+U)"><u>U</u></button>
+            <span class="toolbar-divider"></span>
+            <button type="button" class="toolbar-btn" data-command="insertUnorderedList" title="Madde İşaretli Liste">• Liste</button>
+            <button type="button" class="toolbar-btn" data-command="insertOrderedList" title="Numaralı Liste">1. Liste</button>
+            <span class="toolbar-divider"></span>
+            <button type="button" class="toolbar-btn" data-command="removeFormat" title="Biçimlendirmeyi Temizle">🧹 Temizle</button>
+          </div>
+          
+          <div id="note-content-editor" class="rich-editor" contenteditable="true" placeholder="Kopyalanacak metni buraya yazın ve biçimlendirin..."></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="note-folder-select">Klasör</label>
+            <select id="note-folder-select">
+              <option value="none">Klasörsüz (Genel)</option>
+              <!-- Klasörler JS ile dolacak -->
+            </select>
+          </div>
+          
+          <!-- COLOR SELECTION (ONLY IN MODAL) -->
+          <div class="form-group half">
+            <label>Kart Rengi</label>
+            <div class="color-picker-group">
+              <input type="radio" name="note-color" id="color-red" value="red">
+              <label for="color-red" class="color-picker-dot red" title="Kırmızı"></label>
+              
+              <input type="radio" name="note-color" id="color-orange" value="orange">
+              <label for="color-orange" class="color-picker-dot orange" title="Turuncu"></label>
+
+              <input type="radio" name="note-color" id="color-yellow" value="yellow">
+              <label for="color-yellow" class="color-picker-dot yellow" title="Sarı"></label>
+
+              <input type="radio" name="note-color" id="color-green" value="green">
+              <label for="color-green" class="color-picker-dot green" title="Yeşil"></label>
+
+              <input type="radio" name="note-color" id="color-blue" value="blue" checked>
+              <label for="color-blue" class="color-picker-dot blue" title="Mavi"></label>
+
+              <input type="radio" name="note-color" id="color-purple" value="purple">
+              <label for="color-purple" class="color-picker-dot purple" title="Mor"></label>
+
+              <input type="radio" name="note-color" id="color-grey" value="grey">
+              <label for="color-grey" class="color-picker-dot grey" title="Gri"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-text" id="cancel-note-btn">Vazgeç</button>
+        <button class="btn btn-primary" id="save-note-btn">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOLDER MODAL (ADD & EDIT) -->
+  <div class="modal-backdrop hidden" id="folder-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="folder-modal-title">Yeni Klasör Oluştur</h3>
+        <button class="modal-close-btn" id="close-folder-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group emoji-picker-group">
+            <label for="folder-emoji-input">Simge</label>
+            <input type="text" id="folder-emoji-input" value="📁" maxlength="2" placeholder="📁">
+          </div>
+          <div class="form-group folder-name-group">
+            <label for="folder-name-input">Klasör Adı <span class="required">*</span></label>
+            <input type="text" id="folder-name-input" placeholder="Klasör ismi yazın..." required>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-text" id="cancel-folder-btn">Vazgeç</button>
+        <button class="btn btn-primary" id="save-folder-btn">Klasör Oluştur</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS MODAL (TEMA RENKLERI & YEDEKLEME) -->
+  <div class="modal-backdrop hidden" id="settings-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>PioNotes Ayarları</h3>
+        <button class="modal-close-btn" id="close-settings-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- App Visual Theme Selection -->
+        <div class="settings-group">
+          <label class="settings-group-title">Uygulama Teması</label>
+          <p class="settings-group-desc">Eklentinin genel arayüz temasını seçin.</p>
+          <div class="theme-picker-row" id="theme-picker-container">
+            <button class="theme-picker-btn active" data-theme="dark" title="Koyu Tema">
+              <span class="theme-preview-color" style="background-color: #080c14; border: 1px solid rgba(255,255,255,0.1);"></span>
+              Koyu
+            </button>
+            <button class="theme-picker-btn" data-theme="light" title="Açık Tema">
+              <span class="theme-preview-color" style="background-color: #f1f5f9; border: 1px solid rgba(0,0,0,0.1);"></span>
+              Açık
+            </button>
+            <button class="theme-picker-btn hidden" id="theme-malatya-btn" data-theme="malatya" title="Malatyalı Teması">
+              <span class="theme-preview-color" style="background-color: #170b03; border: 1px solid #fb923c;"></span>
+              Malatyalı 🍑
+            </button>
+            <button class="theme-picker-btn hidden" id="theme-cagla-btn" data-theme="cagla" title="Çağla Teması">
+              <span class="theme-preview-color" style="background-color: #fff1f2; border: 1px solid #db2777;"></span>
+              Çağla 🌸
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <!-- Theme Accent Color Row -->
+        <div class="settings-group">
+          <label class="settings-group-title">Tema Accent Rengi</label>
+          <p class="settings-group-desc">Uygulamanın genel detay ve vurgu renk tonunu seçin.</p>
+          <div class="accent-color-picker" id="accent-picker-container">
+            <button class="accent-dot accent-indigo active" data-accent="indigo" title="İndigo"></button>
+            <button class="accent-dot accent-teal" data-accent="teal" title="Turkuaz"></button>
+            <button class="accent-dot accent-emerald" data-accent="emerald" title="Zümrüt Yeşil"></button>
+            <button class="accent-dot accent-amber" data-accent="amber" title="Kehribar Sarı"></button>
+            <button class="accent-dot accent-rose" data-accent="rose" title="Gül Kırmızı"></button>
+            <button class="accent-dot accent-violet" data-accent="violet" title="Menekşe Mor"></button>
+            <button class="accent-dot accent-cagla hidden" id="accent-cagla-dot" data-accent="cagla" title="Çağla Pembesi 🌸"></button>
+            <button class="accent-dot accent-malatya hidden" id="accent-malatya-dot" data-accent="malatya" title="Malatya Turuncusu 🍑"></button>
+          </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <!-- Data Import/Export Buttons -->
+        <div class="settings-group">
+          <label class="settings-group-title">Veri Yönetimi (Yedekle & Yükle)</label>
+          <p class="settings-group-desc">Tüm notlarınızı, klasörlerinizi ve ayarlarınızı yedekleyebilir veya geri yükleyebilirsiniz.</p>
+          
+          <div class="settings-actions-row">
+            <button id="export-notes-btn" class="btn btn-secondary flex-grow-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Yedek İndir
+            </button>
+            <button id="import-notes-btn" class="btn btn-primary flex-grow-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              Yedek Yükle
+            </button>
+          </div>
+          <!-- Invisible File Input for importing JSON -->
+          <input type="file" id="import-file-input" accept=".json" class="hidden">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="save-settings-btn">Tamam</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container"></div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
